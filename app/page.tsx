@@ -165,8 +165,191 @@ const aircraftInfo = {
   legacy: "Илья Муромец стал родоначальником советских дальних бомбардировщиков. Его конструкция и концепция повлияли на развитие авиации не только в России, но и в других странах. Сикорский, эмигрировав в Америку, применил опыт создания многомоторных машин при разработке для США. Самолёт остался в истории авиации как первый успешный тяжёлый бомбардировщик, который доказал пригодность многомоторной схемы для боевого применения."
 };
 
+// Данные об авиации
+const aircraftGallery = [
+  {
+    id: "albatros",
+    name: "Albatros D.III",
+    country: "Германия",
+    year: "1916",
+    image: "/aircraft/Albatros-D-3-nemeckiy-istrebitel-trofei.jpg",
+    specs: "Скорость: 185 км/ч • Потолок: 5500 м • Вооружение: 2 пулемёта MG08",
+    description: "Немецкий истребитель, один из самых опасных противников русской авиации. Отличался отличной скороподъёмностью и манёвренностью. Взял верх над многими русскими самолётами благодаря синхронизированному пулемётному вооружению и хорошей конструкции."
+  },
+  {
+    id: "anatra-d",
+    name: "Анатра Д",
+    country: "Российская Империя",
+    year: "1916",
+    image: "/aircraft/Anatra-D-russkiu-istrebitel-sobstvennoi-razrabotki.jpg",
+    specs: "Скорость: 165 км/ч • Потолок: 4800 м • Вооружение: 1-2 пулемёта",
+    description: "Русский истребитель, спроектированный на основе немецкого Fokker. Несмотря на копирование конструкции, показал неплохие боевые качества. На русском фронте использовался как разведчик и истребитель."
+  },
+  {
+    id: "anatra-ds",
+    name: "Анатра DS модификация",
+    country: "Российская Империя",
+    year: "1917",
+    image: "/aircraft/Anatra-DS-modifikaciya-anatra.jpg",
+    specs: "Скорость: 170 км/ч • Потолок: 5000 м • Вооружение: 2 пулемёта",
+    description: "Улучшенная версия истребителя Анатра. Внесены изменения в конструкцию крыла и фюзеляжа для повышения лётных характеристик. Производилась в ограниченном количестве."
+  },
+  {
+    id: "c16",
+    name: "C.16 лёгкий двухместный истребитель",
+    country: "Российская Империя",
+    year: "1916",
+    image: "/aircraft/C-16-legkiu-dvuhmestniy-istrebitel-biplan.jpg",
+    specs: "Скорость: 175 км/ч • Потолок: 5100 м • Экипаж: 2 человека",
+    description: "Двухместный истребитель русского производства. Необычный выбор конструкции — два члена экипажа обеспечивали лучшую обороняемость от групповых атак. Использовался для разведки и прикрытия бомбардировщиков."
+  },
+  {
+    id: "farman",
+    name: "Farman-3 французский разведчик",
+    country: "Франция",
+    year: "1914",
+    image: "/aircraft/Farman-3-francuzskiu-razvedchik-i-bombardirovschik.jpg",
+    specs: "Скорость: 120 км/ч • Потолок: 3500 м • Экипаж: 2 человека",
+    description: "Французский разведчик, один из самых распространённых самолётов в русской авиации на начальном этапе войны. Прост в управлении, надёжен, но медленен. Использовался для аэрофотосъёмки и артиллерийской разведки."
+  },
+  {
+    id: "grigorovich",
+    name: "Григорович М-5 русский гидросамолёт",
+    country: "Российская Империя",
+    year: "1915",
+    image: "/aircraft/Grigirovich-M-5-russkiy-gidrosamolet-razvedchik.jpg",
+    specs: "Скорость: 135 км/ч • Потолок: 4000 м • Вооружение: 1 пулемёт",
+    description: "Русский гидросамолёт-истребитель. Революционная конструкция для своего времени. Использовался для разведки над морем и защиты побережья. На удивление манёвренен для гидросамолёта."
+  },
+  {
+    id: "ilya",
+    name: "Илья Муромец",
+    country: "Российская Империя",
+    year: "1914",
+    image: "/aircraft/ilya-murometz.jpg",
+    specs: "Скорость: 140 км/ч • Потолок: 3000 м • Экипаж: 5-7 человек • Вооружение: 7 пулемётов",
+    description: "Легендарный четырёхмоторный бомбардировщик. Революционный самолёт, ни один не был сбит истребителем противника. Применялся в Брусиловском прорыве и позже. Непревзойдённая универсальность и живучесть."
+  },
+  {
+    id: "morane",
+    name: "Morane-Saulnier L французский монопан",
+    country: "Франция",
+    year: "1914",
+    image: "/aircraft/Morane-Saulnier-L-francuzskui-monoplan.jpg",
+    specs: "Скорость: 145 км/ч • Потолок: 4200 м • Экипаж: 1-2 человека",
+    description: "Французский разведчик и легкий истребитель. Монопланная конструкция была революционной. Часто использовался русскими с одним пулемётом для воздушного боя."
+  },
+  {
+    id: "nieuport-iv",
+    name: "Nieuport IV французский истребитель",
+    country: "Франция",
+    year: "1916",
+    image: "/aircraft/Nieuport-IV-francuzckiu-istrebitel.jpg",
+    specs: "Скорость: 180 км/ч • Потолок: 5300 м • Вооружение: 1 пулемёт",
+    description: "Французский истребитель, один из лучших в первой половине войны. Отличная скороподъёмность и маневренность. На нём летали лучшие русские асы Первой мировой войны."
+  },
+  {
+    id: "nieuport-xi",
+    name: "Nieuport XI улучченный вариант",
+    country: "Франция",
+    year: "1917",
+    image: "/aircraft/Nieuport-XI-ylychenniu-variant-istrebitelya.jpg",
+    specs: "Скорость: 185 км/ч • Потолок: 5400 м • Вооружение: 1-2 пулемёта",
+    description: "Улучшенный вариант Nieuport. Сочетает лучшие черты предыдущих версий. Увеличенное вооружение и улучшенная аэродинамика. Выпускался в значительных количествах для русской авиации."
+  },
+  {
+    id: "roland",
+    name: "Roland C.2 немецкий разведчик",
+    country: "Германия",
+    year: "1916",
+    image: "/aircraft/Roland-C-2-nemeckiy-razbedchik-trofei.jpg",
+    specs: "Скорость: 155 км/ч • Потолок: 4900 м • Вооружение: 2 пулемёта",
+    description: "Немецкий разведчик-истребитель. Хороший баланс между скоростью и огневой мощью. Несколько трофейных машин летали на русской стороне."
+  },
+  {
+    id: "voisin",
+    name: "Voisin-3 французский биплан",
+    country: "Франция",
+    year: "1915",
+    image: "/aircraft/Voisin-3-francuzskiu-biplan-razvedchik.jpg",
+    specs: "Скорость: 130 км/ч • Потолок: 3800 м • Вооружение: 1-2 пулемёта",
+    description: "Французский биплан-разведчик. Надёжная конструкция, широко использовалась русской авиацией. Хорошая обзорность благодаря открытой кабине. Применялась до конца войны."
+  }
+];
+
+// Данные об артиллерии
+const artilleryGallery = [
+  {
+    id: "76mm",
+    name: "76-мм пушка образца 1906 года",
+    country: "Российская Империя",
+    year: "1906",
+    image: "/artillery/76-mm-pushka-obrazca-1906-goda.jpg",
+    caliber: "76 мм",
+    weight: "1525 кг",
+    max_range: "8400 м",
+    rof: "8-10 выстр./мин",
+    crew: "5-6 человек",
+    description: "Основное полевое орудие русской армии. Спроектировано германским конструктором Крейзотом. Легко массируется, имеет хорошую точность стрельбы. В Первой мировой войне использовалось как главное противопехотное и противогромадянское орудие."
+  },
+  {
+    id: "107mm",
+    name: "107-мм пушка образца 1910 года",
+    country: "Российская Империя",
+    year: "1910",
+    image: "/artillery/107-mm-pushka-obrazca-1910-goda.jpg",
+    caliber: "107 мм",
+    weight: "2290 кг",
+    max_range: "10000 м",
+    rof: "5-6 выстр./мин",
+    crew: "6-7 человек",
+    description: "Промежуточное орудие между лёгкой и тяжёлой артиллерией. Хороший баланс между мобильностью и огневой мощью. Редко встречалось в расчётах, производилось в меньшем количестве, чем 76-мм пушка."
+  },
+  {
+    id: "122mm",
+    name: "122-мм гаубица образца 1909 года",
+    country: "Российская Империя",
+    year: "1909",
+    image: "/artillery/122-mm-gaubica-obrazca-1909-goda.jpg",
+    caliber: "122 мм",
+    weight: "3175 кг",
+    max_range: "11700 м",
+    rof: "3-4 выстр./мин",
+    crew: "7-8 человек",
+    description: "Гаубица с большой огневой мощью. Хороша для разрушения укреплений. Производилась в ограниченных количествах, всегда не хватало. В Брусиловском прорыве сыграла значительную роль."
+  },
+  {
+    id: "152mm",
+    name: "152-мм гаубица образца 1909 года",
+    country: "Российская Империя",
+    year: "1909",
+    image: "/artillery/152-mm-gaubica-obrazca-1909-goda.jpg",
+    caliber: "152 мм",
+    weight: "4890 кг",
+    max_range: "12800 м",
+    rof: "2-3 выстр./мин",
+    crew: "8-9 человек",
+    description: "Тяжёлая гаубица с огромной разрушительной силой. Медленнозарядная, но наносит колоссальный ущерб позициям противника. Была в дефиците, чем пользовались немцы."
+  },
+  {
+    id: "305mm",
+    name: "305-мм мортира образца 1915 года",
+    country: "Российская Империя",
+    year: "1915",
+    image: "/artillery/305-mm-mortira-obrazca-1915-goda.JPG",
+    caliber: "305 мм",
+    weight: "8700 кг",
+    max_range: "8000 м",
+    rof: "1-2 выстр./мин",
+    crew: "10-12 человек",
+    description: "Сверхтяжёлое орудие для разрушения фортификаций. Мощный снаряд весом до 470 кг способен сравнять с землёй целые форты. Применялась в критических ситуациях, требует специальной подготовки позиций."
+  }
+];
+
 export default function WW1ArtilleryTimeline() {
   const [selectedYear, setSelectedYear] = useState<string>("1916");
+  const [selectedAircraft, setSelectedAircraft] = useState<number>(0);
+  const [selectedArtillery, setSelectedArtillery] = useState<number>(0);
   const years = Object.keys(timelineData);
 
   return (
@@ -406,13 +589,161 @@ export default function WW1ArtilleryTimeline() {
           </div>
         </div>
 
+        {/* СЕКЦИЯ: АВИАЦИЯ ПМВ */}
+        <div className="mt-16 mb-12">
+          <h2 className="text-4xl font-bold text-blue-300 mb-8 text-center">Авиация Первой Мировой Войны</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div className="md:col-span-2 bg-zinc-900/80 border border-blue-900/60 rounded-2xl overflow-hidden">
+              <div className="relative h-96 bg-black">
+                <img 
+                  src={aircraftGallery[selectedAircraft].image} 
+                  alt={aircraftGallery[selectedAircraft].name}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-blue-300 mb-2">{aircraftGallery[selectedAircraft].name}</h3>
+                <div className="flex gap-4 mb-4 text-sm text-blue-400">
+                  <span>Страна: {aircraftGallery[selectedAircraft].country}</span>
+                  <span>Год: {aircraftGallery[selectedAircraft].year}</span>
+                </div>
+                <div className="bg-zinc-800/50 rounded-lg p-4 mb-4">
+                  <p className="text-blue-200 text-sm mb-3 font-semibold">Характеристики:</p>
+                  <p className="text-amber-100/80 text-xs leading-relaxed">{aircraftGallery[selectedAircraft].specs}</p>
+                </div>
+                <p className="text-amber-100/90 leading-relaxed text-sm">
+                  {aircraftGallery[selectedAircraft].description}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3 overflow-y-auto max-h-96">
+              {aircraftGallery.map((aircraft, idx) => (
+                <button
+                  key={aircraft.id}
+                  onClick={() => setSelectedAircraft(idx)}
+                  className={`p-3 rounded-lg text-left transition-all border text-xs ${
+                    selectedAircraft === idx
+                      ? 'bg-blue-500 border-blue-400 text-white shadow-lg shadow-blue-500/30'
+                      : 'bg-zinc-900/60 border-blue-900/40 text-blue-300 hover:border-blue-700'
+                  }`}
+                >
+                  <div className="font-semibold">{aircraft.name}</div>
+                  <div className="text-blue-200/60">{aircraft.country} • {aircraft.year}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ВТОРАЯ 3D МОДЕЛЬ - ПУШКА */}
+        <div className="mt-12 mb-12">
+          <h2 className="text-3xl font-bold text-amber-300 mb-8 text-center">3D Модель: 76-мм пушка образца 1906 года</h2>
+          <div className="h-[560px] rounded-3xl overflow-hidden border border-amber-900/40 bg-black relative">
+            <Canvas camera={{ position: [0, 0.5, 1.2], fov: 45 }}>
+              <ambientLight intensity={0.6} />
+              <spotLight position={[10, 15, 5]} angle={0.3} intensity={1.5} />
+              <Environment preset="warehouse" />
+              <ContactShadows position={[0, -2.5, 0]} opacity={0.7} scale={12} blur={2} />
+
+              <Suspense fallback={null}>
+                <Model url="/models/pushka.glb" />
+              </Suspense>
+
+              <OrbitControls 
+                enablePan={false}
+                minDistance={0.8}
+                maxDistance={5}
+                autoRotate
+                autoRotateSpeed={0.4}
+              />
+            </Canvas>
+
+            <div className="absolute bottom-6 left-6 bg-black/70 text-amber-400 text-xs px-4 py-2 rounded-xl border border-amber-900">
+              Вращай модель мышкой • Прокручивай колёсиком для масштабирования
+            </div>
+          </div>
+        </div>
+
+        {/* СЕКЦИЯ: АРТИЛЛЕРИЯ ПМВ */}
+        <div className="mt-16 mb-12">
+          <h2 className="text-4xl font-bold text-amber-300 mb-8 text-center">Артиллерия Первой Мировой Войны</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="md:col-span-2 bg-zinc-900/80 border border-amber-900/60 rounded-2xl overflow-hidden">
+              <div className="relative h-96 bg-black">
+                <img 
+                  src={artilleryGallery[selectedArtillery].image} 
+                  alt={artilleryGallery[selectedArtillery].name}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-amber-300 mb-2">{artilleryGallery[selectedArtillery].name}</h3>
+                <div className="flex gap-4 mb-6 text-sm text-amber-400">
+                  <span>Страна: {artilleryGallery[selectedArtillery].country}</span>
+                  <span>Год: {artilleryGallery[selectedArtillery].year}</span>
+                </div>
+
+                <div className="bg-zinc-800/50 rounded-lg p-4 mb-4">
+                  <p className="text-amber-200 text-sm mb-3 font-semibold">Технические характеристики:</p>
+                  <div className="grid grid-cols-2 gap-3 text-xs">
+                    <div>
+                      <span className="text-amber-400">Калибр:</span>
+                      <p className="text-amber-100/80">{artilleryGallery[selectedArtillery].caliber}</p>
+                    </div>
+                    <div>
+                      <span className="text-amber-400">Вес:</span>
+                      <p className="text-amber-100/80">{artilleryGallery[selectedArtillery].weight}</p>
+                    </div>
+                    <div>
+                      <span className="text-amber-400">Дальность:</span>
+                      <p className="text-amber-100/80">{artilleryGallery[selectedArtillery].max_range}</p>
+                    </div>
+                    <div>
+                      <span className="text-amber-400">Скорострельность:</span>
+                      <p className="text-amber-100/80">{artilleryGallery[selectedArtillery].rof}</p>
+                    </div>
+                    <div className="col-span-2">
+                      <span className="text-amber-400">Расчёт:</span>
+                      <p className="text-amber-100/80">{artilleryGallery[selectedArtillery].crew}</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-amber-100/90 leading-relaxed text-sm">
+                  {artilleryGallery[selectedArtillery].description}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              {artilleryGallery.map((gun, idx) => (
+                <button
+                  key={gun.id}
+                  onClick={() => setSelectedArtillery(idx)}
+                  className={`p-4 rounded-lg text-left transition-all border ${
+                    selectedArtillery === idx
+                      ? 'bg-amber-600 border-amber-400 text-white shadow-lg shadow-amber-500/30'
+                      : 'bg-zinc-900/60 border-amber-900/40 text-amber-300 hover:border-amber-700'
+                  }`}
+                >
+                  <div className="font-semibold text-sm">{gun.name}</div>
+                  <div className="text-amber-200/60 text-xs">{gun.country} • {gun.year}</div>
+                  <div className="text-amber-300/80 text-xs mt-1">{gun.caliber}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <p className="text-center text-[10px] text-amber-500/30 mt-12">
           Интерактивный проект • Русская артиллерия и авиация в ПМВ • 1914–1918
         </p>
       </div>
-	<p className="text-center text-xs text-amber-400/60 mt-8 pb-8 border-t border-amber-900/40 pt-6">
-  Авторы проекта — студенты ДГТУ группы УТС-11: Красавин Егор, Кравец Даниил, Костюков Сергей
-</p>
+      <p className="text-center text-xs text-amber-400/60 mt-8 pb-8 border-t border-amber-900/40 pt-6">
+        Авторы проекта — студенты ДГТУ группы УТС-11: Красавин Егор, Кравец Даниил, Костюков Сергей
+      </p>
     </div>
   );
 }
