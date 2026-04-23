@@ -357,7 +357,7 @@ export default function WW1ArtilleryTimeline() {
       <div className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 border-b border-amber-900/50 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
           <h1 className="text-2xl font-bold text-amber-300 tracking-tight">
-            Русская артиллерия и авиация в ПМВ
+            Русская артиллерия и авиация в 1914-1918
           </h1>
           <div className="text-sm text-amber-500/70">Интерактивная хронология</div>
         </div>
